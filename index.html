@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+   <div class="header">
+    <h2>TodoList App </h2>
+    <p>By codebox</p>
+    <input type="text" placeholder="Search...">
+   </div>
+
+   <div class="main">
+    <div>
+        <h2>My List</h2>
+    </div>
+    <ul>
+        <li>
+            <span class="names">Name of the wind</span>
+             <span class="delete">Delete</span>
+        </li>
+        <li>
+            <span class="names">Death match</span>
+             <span class="delete">Delete</span>
+        </li>
+        <li>
+            <span class="names">Javascript dom</span>
+            <span class="delete">Delete</span>
+        </li>
+        <li>
+            <span class="names">Name of the wind</span>
+            <span class="delete">Delete</span>
+        </li>
+    </ul>
+ 
+    <br>
+
+    <form id="add">
+        <input type="text" placeholder="Add something...">
+        <button>Add</button>
+    </form>
+   </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script scr="intro.js">
+      const list = document.querySelector('.main ul');
+
+      list.addEventListener('click', function(e){
+        if(e.target.className == 'delete'){
+            const li = e.target.parentElement;
+            list.removeChild(li);
+        }
+
+      });
+
+      const addForm = document.forms['add'];
+
+      addForm.addEventListener('submit', function(e){
+        e.preventDefault();
+        const value = addForm.querySelector('input[type="text"]')
+
+      })
+
+    </script>
+    
+</body>
+</html>
